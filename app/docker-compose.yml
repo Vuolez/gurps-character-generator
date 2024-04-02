@@ -1,0 +1,12 @@
+version: '3'
+services:
+  postgres:
+    container_name: gcg_postgres
+    image: postgres
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./create_db.sql:/docker-entrypoint-initdb.d/create_db.sql
+    environment:
+      POSTGRES_USER: vuolez
+      POSTGRES_PASSWORD: vuolez
