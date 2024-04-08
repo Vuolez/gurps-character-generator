@@ -20,7 +20,7 @@ public class Character {
     String eyesColor;
     String hairColor;
     String leadingHand;
-    String sex;
+    String gender;
     String birthday;
 
     Integer strength = 10;

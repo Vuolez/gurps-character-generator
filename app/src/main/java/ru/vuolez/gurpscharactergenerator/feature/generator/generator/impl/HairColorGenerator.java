@@ -15,12 +15,14 @@ import static ru.vuolez.gurpscharactergenerator.feature.generator.util.ValidateU
 @Service
 public class HairColorGenerator extends Generator {
 
-    private final static List<String> HAIR_COLOR_DEFAULT = List.of("Брюнет",
+    private final static List<String> HAIR_COLOR_DEFAULT = List.of(
+            "Брюнет",
             "Рыжий",
             "Блондин",
             "Шатен",
             "Русый",
-            "Седой");
+            "Седой"
+    );
 
     public HairColorGenerator() {
         generatorType = PRIMITIVE_BASE;
@@ -30,7 +32,7 @@ public class HairColorGenerator extends Generator {
     public Character generate(Character c, CharacterTemplateDto ct) {
         var hairColor = HAIR_COLOR_DEFAULT;
         if (ct != null) {
-            hairColor = getIfValidOrElse(ct.getHairColorList(), HAIR_COLOR_DEFAULT);
+            hairColor = getIfValidOrElse(ct.getHairColors(), HAIR_COLOR_DEFAULT);
         }
         return c.setHairColor(RandomUtil.getRandomFromList(hairColor));
     }

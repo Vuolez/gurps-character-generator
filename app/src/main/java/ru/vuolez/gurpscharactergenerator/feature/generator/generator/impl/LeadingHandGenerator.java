@@ -28,7 +28,7 @@ public class LeadingHandGenerator extends Generator {
     public Character generate(Character c, CharacterTemplateDto ct) {
         var leadingHands = LEADING_HANDS_DEFAULT;
         if (ct != null) {
-            leadingHands = getIfValidOrElse(ct.getLeadingHandList(), LEADING_HANDS_DEFAULT);
+            leadingHands = getIfValidOrElse(ct.getLeadingHands(), LEADING_HANDS_DEFAULT);
         }
         return c.setLeadingHand(RandomUtil.getRandomFromList(leadingHands));
     }

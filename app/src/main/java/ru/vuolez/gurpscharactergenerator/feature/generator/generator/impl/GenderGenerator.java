@@ -13,24 +13,24 @@ import static ru.vuolez.gurpscharactergenerator.feature.generator.util.ValidateU
 
 
 @Service
-public class SexGenerator extends Generator {
+public class GenderGenerator extends Generator {
 
-    private final static List<String> SEX_DEFAULT = List.of(
+    private final static List<String> GENDER_DEFAULT = List.of(
             "Мужчина",
             "Женщина"
     );
 
-    public SexGenerator() {
+    public GenderGenerator() {
         generatorType = PRIMITIVE_BASE;
     }
 
     @Override
     public Character generate(Character c, CharacterTemplateDto ct) {
-        var sex = SEX_DEFAULT;
+        var gender = GENDER_DEFAULT;
         if (ct != null) {
-            sex = getIfValidOrElse(ct.getLeadingHandList(), SEX_DEFAULT);
+            gender = getIfValidOrElse(ct.getGenders(), GENDER_DEFAULT);
         }
-        return c.setSex(RandomUtil.getRandomFromList(sex));
+        return c.setGender(RandomUtil.getRandomFromList(gender));
     }
 
 }

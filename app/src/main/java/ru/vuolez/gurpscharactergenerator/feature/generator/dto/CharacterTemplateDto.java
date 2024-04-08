@@ -12,20 +12,28 @@ import java.util.List;
 @Accessors(chain = true)
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class CharacterTemplateDto {
-    List<String> nameList;
+    List<String> maleNames;
+    List<String> femaleNames;
+
     Integer heightMin;
     Integer heightMax;
     Integer weightMin;
     Integer weightMax;
     Integer ageMin;
     Integer ageMax;
-    List<String> eyeColorList;
-    List<String> hairColorList;
-    List<String> leadingHandList;
-    List<String> sexList;
-    List<Advantage> mandatoryAdvantageList;
+    List<String> eyeColors;
+    List<String> hairColors;
+    List<String> leadingHands;
+    List<String> genders;
+    List<Advantage> mandatoryAdvantages;
 
     Integer availableQuirkPointsMin;
     Integer availableQuirkPointsMax;
     List<Integer> availableQuirkIds;
+
+    ProfessionDto baseSkills;
+
+    Integer professionsCountMin;
+    Integer professionsCountMax;
+    List<ProfessionDto> professions;
 }

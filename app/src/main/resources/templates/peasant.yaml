@@ -1,0 +1,238 @@
+{
+  "maleNames": [
+    "Grimbald",
+    "Alaric",
+    "Ralf",
+    "Vitold",
+    "Winfred",
+    "Feolan",
+    "Eardwulf",
+    "Gustav"
+  ],
+  "femaleNames": [
+    "Terentia",
+    "Iaera",
+    "Klymene",
+    "Servilia",
+    "Damia",
+    "Helle",
+    "Fabia",
+    "Scylla"
+  ],
+  "heightMin": 160,
+  "heightMax": 195,
+  "weightMin": 55,
+  "weightMax": 100,
+  "ageMin": 18,
+  "ageMax": 45,
+  "eyeColors": [
+    "Карий",
+    "Голубой",
+    "Зеленый",
+    "Миндальный"
+  ],
+  "hairColors": [
+    "Рыжий",
+    "Блондин",
+    "Шатен",
+    "Русый",
+    "Седой"
+  ],
+  "leadingHands": [
+    "Правша",
+    "Левша"
+  ],
+  "genders": [
+    "Мужчина",
+    "Женщина"
+  ],
+  "mandatoryAdvantages": [
+  ],
+
+  "availableQuirkPointsMin": 2,
+  "availableQuirkPointsMax": 4,
+  "availableQuirkIds": [
+    2,5,7,8,9,11,22,25,26,27,28,30
+  ],
+
+  "baseSkills":
+    {
+      "name": "Крестьянин",
+      "skillPoints": 0,
+      "skills": [
+        {
+          "name": "Знание местности (Родная деревня)",
+          "id": 626,
+          "min": 3,
+          "max": 3
+        },
+        {
+          "name": "Домашнее хозяйство",
+          "id": 326,
+          "min": 2,
+          "max": 2
+        },
+        {
+          "name": "Верховая езда (Лошадь)",
+          "id": 514,
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+
+  "professionsCountMin": 1,
+  "professionsCountMax": 1,
+  "professions": [
+    {
+      "name": "Кузнец",
+      "skillPoints": 5,
+      "skills": [
+        {
+          "name": "Кузнец/ТУ (Медь)",
+          "id": 548,
+          "min": 1,
+          "max": 3
+        },
+        {
+          "name": "Кузнец/ТУ (Железо)",
+          "id": 549,
+          "min": 1,
+          "max": 3
+        },
+        {
+          "name": "Кузнец/ТУ (Олово и свинец)",
+          "id": 550,
+          "min": 1,
+          "max": 3
+        }
+      ]
+    },
+    {
+      "name": "Крестьянин",
+      "skillPoints": 0,
+      "skills": [
+        {
+          "name": "Пирушки",
+          "id": 95,
+          "min": 0,
+          "max": 3
+        },
+        {
+          "name": "Картография/ТУ",
+          "id": 97,
+          "min": 0,
+          "max": 3
+        },
+        {
+          "name": "Лазание",
+          "id": 99,
+          "min": 0,
+          "max": 3
+        },
+        {
+          "name": "Танцы",
+          "id": 138,
+          "min": 0,
+          "max": 3
+        },
+        {
+          "name": "Эротическое Искусство",
+          "id": 210,
+          "min": 0,
+          "max": 3
+        },
+        {
+          "name": "Нетрадиционная медицина",
+          "id": 212,
+          "min": 0,
+          "max": 3
+        },
+        {
+          "name": "Кража",
+          "id": 243,
+          "min": 0,
+          "max": 3
+        },
+        {
+          "name": "Азартные игры",
+          "id": 266,
+          "min": 0,
+          "max": 3
+        },
+        {
+          "name": "Садовод",
+          "id": 268,
+          "min": 0,
+          "max": 3
+        },
+        {
+          "name": "Язык жестов",
+          "id": 286,
+          "min": 0,
+          "max": 3
+        },
+        {
+          "name": "Геральдика",
+          "id": 313,
+          "min": 0,
+          "max": 3
+        },
+        {
+          "name": "Знахарь/ТУ",
+          "id": 314,
+          "min": 0,
+          "max": 3
+        },
+        {
+          "name": "Запугивание",
+          "id": 336,
+          "min": 0,
+          "max": 3
+        },
+        {
+          "name": "Нож",
+          "skillId": 344,
+          "min": 0,
+          "max": 3
+        },
+        {
+          "name": "Навьючивание",
+          "id": 457,
+          "min": 0,
+          "max": 3
+        },
+        {
+          "name": "Попрошайничество",
+          "id": 462,
+          "min": 0,
+          "max": 3
+        },
+        {
+          "name": "Карманное воровство",
+          "id": 475,
+          "min": 0,
+          "max": 3
+        },
+        {
+          "name": "Древковое оружие",
+          "id": 495,
+          "min": 0,
+          "max": 3
+        },
+        {
+          "name": "Собирание",
+          "id": 5,
+          "min": 0,
+          "max": 3
+        },
+        {
+          "name": "Драка",
+          "id": 89,
+          "min": 0,
+          "max": 3
+        }
+      ]
+    }
+  ]
+}

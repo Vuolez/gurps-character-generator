@@ -29,7 +29,7 @@ public class EyesColorGenerator extends Generator {
     public Character generate(Character c, CharacterTemplateDto ct) {
         var eyesColor = EYES_COLOR_DEFAULT;
         if(ct != null){
-            eyesColor = getIfValidOrElse(ct.getEyeColorList(), EYES_COLOR_DEFAULT);
+            eyesColor = getIfValidOrElse(ct.getEyeColors(), EYES_COLOR_DEFAULT);
         }
         return c.setEyesColor(RandomUtil.getRandomFromList(eyesColor));
     }

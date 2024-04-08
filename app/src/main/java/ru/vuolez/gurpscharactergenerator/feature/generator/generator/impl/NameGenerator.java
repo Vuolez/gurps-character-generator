@@ -15,7 +15,7 @@ import static ru.vuolez.gurpscharactergenerator.feature.generator.util.ValidateU
 @Service
 public class NameGenerator extends Generator {
 
-    private final static List<String> MAN_NAMES_DEFAULT = List.of(
+    private final static List<String> MALE_NAMES_DEFAULT = List.of(
             "Grimbald",
             "Alaric",
             "Ralf",
@@ -26,7 +26,7 @@ public class NameGenerator extends Generator {
             "Gustav"
     );
 
-    private final static List<String> WOMAN_NAMES_DEFAULT = List.of(
+    private final static List<String> FEMALE_NAMES_DEFAULT = List.of(
             "Terentia",
             "Iaera",
             "Klymene",
@@ -43,15 +43,19 @@ public class NameGenerator extends Generator {
 
     @Override
     public Character generate(Character c, CharacterTemplateDto ct) {
-        var sexName = MAN_NAMES_DEFAULT;
-        if (c.getSex().equals("Ж") || c.getSex().equals("Женщина")) {
-            sexName = WOMAN_NAMES_DEFAULT;
-        };
+        var sexName = MALE_NAMES_DEFAULT;
+        if (c.getGender().equals("Ж") || c.getGender().equals("Женщина")) {
+            sexName = FEMALE_NAMES_DEFAULT;
+        }
 
         var names = sexName;
 
         if (ct != null) {
-            names = getIfValidOrElse(ct.getNameList(), sexName);
+            if (c.getGender().equals("Ж") || c.getGender().equals("Женщина")) {
+                names = getIfValidOrElse(ct.getFemaleNames(), sexName);
+            } else {
+                names = getIfValidOrElse(ct.getMaleNames(), sexName);
+            }
         }
         return c.setName(RandomUtil.getRandomFromList(names));
     }
