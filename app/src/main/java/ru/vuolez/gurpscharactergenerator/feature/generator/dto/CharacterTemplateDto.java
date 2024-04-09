@@ -31,7 +31,10 @@ public class CharacterTemplateDto {
     Integer availableQuirkPointsMax;
     List<Integer> availableQuirkIds;
 
-    ProfessionDto baseSkills;
+    /** Навыки которые точно должен иметь персонаж. */
+    ProfessionDto requiredBaseSkills;
+    /** Навыки которые необязательно должен иметь персонаж. */
+    ProfessionDto requiredRandomSkills;
 
     Integer professionsCountMin;
     Integer professionsCountMax;

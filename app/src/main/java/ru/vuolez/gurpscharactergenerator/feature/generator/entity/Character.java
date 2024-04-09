@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 import lombok.experimental.FieldDefaults;
 import ru.vuolez.gurpscharactergenerator.feature.generator.dto.QuirkDto;
+import ru.vuolez.gurpscharactergenerator.feature.generator.dto.SkillDto;
 
 import java.util.List;
 
@@ -13,6 +14,7 @@ import java.util.List;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Accessors(chain = true)
 public class Character {
+
     String name;
     Integer height;
     Integer weight;
@@ -29,5 +31,6 @@ public class Character {
     Integer health = 10;
 
     List<QuirkDto> quirks;
+    List<SkillDto> skills;
 
 }

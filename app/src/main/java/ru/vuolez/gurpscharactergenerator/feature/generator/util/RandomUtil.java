@@ -4,24 +4,19 @@ import lombok.experimental.UtilityClass;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 
 @UtilityClass
 public class RandomUtil {
+
+    public static final Random random = new Random();
 
     public static <T> T getRandomFromList(List<T> list) {
         return list.stream()
                 .skip((int) (list.size() * Math.random()))
                 .findFirst()
                 .orElse(null);
-    }
-
-    public static <T> int getRandomIndexFromList(List<T> list) {
-        return (int) (list.size() * Math.random());
-    }
-
-    public static <T> int getRandom(List<T> list) {
-        return (int) (list.size() * Math.random());
     }
 
     public static <T> List<T> getRandomFromList(List<T> list, int count) {
@@ -35,6 +30,10 @@ public class RandomUtil {
         }
 
         return result;
+    }
+
+    public static int getRandomInt(Integer min, Integer max) {
+        return random.nextInt(max + 1 - min) + min;
     }
 
 }
